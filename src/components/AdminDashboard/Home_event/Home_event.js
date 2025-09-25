@@ -1,6 +1,7 @@
 import React from 'react'
 import EventIntro from './EventIntro'
 
+//
 const Home_event = () => {
   return (
     <div>
