@@ -664,7 +664,7 @@ const EventForm = ({ apiType }) => {
 
   const token = localStorage.getItem("userToken");
   const adminId = localStorage.getItem("adminId");
-  const API_BASE = `https://testtapi1.ap-1.evennode.com/api/${apiType}`;
+  const API_BASE = `${process.env.REACT_APP_BACKEND_API}api/${apiType}`;
 
   const axiosAuth = axios.create({
     baseURL: API_BASE,
