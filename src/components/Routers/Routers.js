@@ -38,11 +38,12 @@ const Routers = ({ isAuthenticated, setIsAuthenticated }) => {
   {/* Private - Dashboard + Admin routes */}
   <Route element={<PrivateRoute isAuthenticated={isAuthenticated} />}>
     <Route element={<DashboardLayout />}>
-      <Route path="/dashboard" element={<Dashboard />} />
+      {/* <Route path="/dashboard" element={<Dashboard />} /> */}
+      <Route path="/seva-bookings" element={<SevaBookings />} />
+      
       <Route path="/temple-bookings" element={<TempleBookings />} />
       <Route path="/home_event" element={<Home_event/>} />
       <Route path="/event-bookings" element={<EventBookings />} />
-      <Route path="/seva-bookings" element={<SevaBookings />} />
       <Route path="/banner" element={<Banner />} />
       <Route path="/card-manager" element={<CardManagement />} />
       <Route path="/add-events" element={<Events />} />
