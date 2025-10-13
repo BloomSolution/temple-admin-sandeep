@@ -55,7 +55,7 @@ const Routers = ({ isAuthenticated, setIsAuthenticated }) => {
       <Route path="/add-sevas" element={<AddSevas />} />
       <Route path="/publications" element={<Publications />} />
       <Route path="/change-password" element={<ChangePassword />} />
-      <Route path="*" element={<Navigate to="/dashboard" replace />} />
+      <Route path="*" element={<Navigate to="/seva-bookings" replace />} />
     </Route>
   </Route>
 </Routes>
