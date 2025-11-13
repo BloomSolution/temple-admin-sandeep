@@ -60,7 +60,7 @@ const DashboardSidebar = ({ isOpen, toggleSidebar }) => {
           <FaImage className="sidebar-icon" /> Banner
       </NavLink>
 
-      <NavLink to="/home_event" className="sidebar-link" onClick={toggleSidebar}>
+      <NavLink to="/homeevent" className="sidebar-link" onClick={toggleSidebar}>
           <FaInfoCircle className="sidebar-icon" />
            Home About
       </NavLink>

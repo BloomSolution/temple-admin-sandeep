@@ -20,6 +20,7 @@ import Login from "../Login/Login";
 import SignUp from "../Login/SignUp";
 import CardManagement from "../AdminDashboard/CardManagement";
 import Home_event from "../AdminDashboard/Home_event/Home_event";
+import HomeEvent from "../AdminDashboard/Home_event/HomeEvent";
 
 // ✅ Protect routes
 const PrivateRoute = ({ isAuthenticated }) => {
@@ -42,7 +43,8 @@ const Routers = ({ isAuthenticated, setIsAuthenticated }) => {
       <Route path="/seva-bookings" element={<SevaBookings />} />
       
       <Route path="/temple-bookings" element={<TempleBookings />} />
-      <Route path="/home_event" element={<Home_event/>} />
+      {/* <Route path="/home_event" element={<Home_event/>} /> */}
+      <Route path="homeevent" element={<HomeEvent/>} />
       <Route path="/event-bookings" element={<EventBookings />} />
       <Route path="/banner" element={<Banner />} />
       <Route path="/card-manager" element={<CardManagement />} />
