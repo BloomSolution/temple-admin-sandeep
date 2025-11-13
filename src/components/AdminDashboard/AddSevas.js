@@ -641,7 +641,7 @@ const AddSevas = () => {
 {/* Seva Name or Recurring Event Dropdown */}
 {sevaType === "Event-Specific Sevas" ? (
   <>
-    {/* <div className="form-group-seva">
+    <div className="form-group-seva">
       <label htmlFor="recurringSeva">Select Recurring Event (Optional)</label>
       <select
         id="recurringSeva"
@@ -656,7 +656,7 @@ const AddSevas = () => {
           </option>
         ))}
       </select>
-    </div> */}
+    </div>
 
     <div className="form-group-seva">
       <label htmlFor="sevaName">Seva Name (Optional)</label>
