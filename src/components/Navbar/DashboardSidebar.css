@@ -101,3 +101,17 @@
 .submenu-arrow.open {
   transform: rotate(90deg);
 }
+
+
+.logout-btn {
+  background: none;
+  border: none;
+  color: inherit;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  color: white;
+}
+.logout-btn:hover {
+  color: #ff5555;
+}

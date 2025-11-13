@@ -298,7 +298,13 @@ formData.append("existingImages", JSON.stringify(existingImages));
             <div key={id} className="event-date-row">
               <input type="date" value={date} min={fromDate || today} max={toDate || ""} onChange={(e) => handleEventDateChange(id, "date", e.target.value)} required />
               <input type="text" placeholder="Pooja Name" value={sevaName} onChange={(e) => handleEventDateChange(id, "sevaName", e.target.value)} required />
-              <input type="number" placeholder="Price (₹)" value={price} min="0" onChange={(e) => handleEventDateChange(id, "price", e.target.value)} required />
+
+              <input type="number"
+               placeholder="Price (₹)" 
+               value={price} min="0" 
+               onChange={(e) => handleEventDateChange(id, "price", e.target.value)} 
+               onWheel={(e) => e.target.blur()} // 🔒 disable scroll change
+               required  />
               {eventDates.length > 1 && <button type="button" className="remove-date-btn" onClick={() => handleRemoveEventDate(id)}>🗑️</button>}
             </div>
           ))}

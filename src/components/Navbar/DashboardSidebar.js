@@ -19,11 +19,28 @@ import {
 
 const DashboardSidebar = ({ isOpen, toggleSidebar }) => {
   const navigate = useNavigate(); 
+  // const handleLogout = () => {
+  //   localStorage.removeItem("token");
+  //   sessionStorage.clear(); 
+  //   navigate("/login");
+  // };
+
   const handleLogout = () => {
-    localStorage.removeItem("token");
-    sessionStorage.clear(); 
-    navigate("/login");
-  };
+  // remove all login-related data
+  localStorage.removeItem("isAuthenticated");
+  localStorage.removeItem("userToken");
+  localStorage.removeItem("userEmail");
+  localStorage.removeItem("userRole");
+  localStorage.removeItem("userId");
+  localStorage.removeItem("isLoggedIn"); 
+
+  sessionStorage.clear();
+
+  // redirect to login page
+  navigate("/login");
+  window.location.reload(); // optional but ensures clean state
+};
+
   return (
     <div className={`dashboard-sidebar ${isOpen ? "open" : ""}`}>
       <nav className="sidebar-nav">
@@ -100,7 +117,7 @@ const DashboardSidebar = ({ isOpen, toggleSidebar }) => {
         </a>
 
         
-        <NavLink
+        {/* <NavLink
           to="/logout"
           className="sidebar-link"
           onClick={(e) => {
@@ -110,7 +127,16 @@ const DashboardSidebar = ({ isOpen, toggleSidebar }) => {
           }}
         >
           <FaSignOutAlt className="sidebar-icon" /> Logout
-        </NavLink>
+        </NavLink> */}
+        <button
+  className="sidebar-link logout-btn"
+  onClick={() => {
+    toggleSidebar();
+    handleLogout();
+  }}
+>
+  <FaSignOutAlt className="sidebar-icon" /> Logout
+</button>
       </nav>
     </div>
   );

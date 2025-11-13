@@ -94,9 +94,9 @@ export default function Login({ setIsAuthenticated }) {
         </div>
 
         <button type="submit" className="auth-btn">Login</button>
-        <p className="auth-link">
+        {/* <p className="auth-link">
           Don’t have an account? <Link to="/signup">Sign up</Link>
-        </p>
+        </p> */}
       </form>
     </div>
   );

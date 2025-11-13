@@ -34,7 +34,7 @@ const Routers = ({ isAuthenticated, setIsAuthenticated }) => {
   <Route path="/" element={<Navigate to="/login" replace />} />
   {/* Public - Login & Signup */}
   <Route path="/login" element={<Login setIsAuthenticated={setIsAuthenticated} />} />
-  <Route path="/signup" element={<SignUp setIsAuthenticated={setIsAuthenticated} />} />
+  {/* <Route path="/signup" element={<SignUp setIsAuthenticated={setIsAuthenticated} />} /> */}
   {/* Private - Dashboard + Admin routes */}
   <Route element={<PrivateRoute isAuthenticated={isAuthenticated} />}>
     <Route element={<DashboardLayout />}>

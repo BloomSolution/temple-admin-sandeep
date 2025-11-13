@@ -641,7 +641,7 @@ const AddSevas = () => {
 {/* Seva Name or Recurring Event Dropdown */}
 {sevaType === "Event-Specific Sevas" ? (
   <>
-    <div className="form-group-seva">
+    {/* <div className="form-group-seva">
       <label htmlFor="recurringSeva">Select Recurring Event (Optional)</label>
       <select
         id="recurringSeva"
@@ -656,7 +656,7 @@ const AddSevas = () => {
           </option>
         ))}
       </select>
-    </div>
+    </div> */}
 
     <div className="form-group-seva">
       <label htmlFor="sevaName">Seva Name (Optional)</label>
@@ -755,6 +755,7 @@ const AddSevas = () => {
               id="price"
               value={price}
               onChange={(e) => setPrice(e.target.value)}
+              onWheel={(e) => e.target.blur()} // 🔒 disable scroll change
               placeholder="Enter Price"
               min="0"
               step="0.01"
